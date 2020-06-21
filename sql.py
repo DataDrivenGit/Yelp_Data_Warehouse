@@ -367,11 +367,15 @@ dim_users_table_test      = "SELECT * FROM dim_users LIMIT 5"
 
 # QUERY LISTS
 
-drop_table_queries = [staging_user_table_drop ]
+drop_table_queries = [ staging_tip_table_drop,staging_user_table_drop,staging_review_table_drop,
+                        staging_business_table_drop,dim_users_table_drop, dim_location_table_drop, 
+                        dim_business_table_drop, dim_datetime_table_drop, fact_tip_table_drop,fact_review_table_drop]
 
-create_table_queries = [  staging_user_table_create ]
+create_table_queries = [ staging_tip_table_create, staging_user_table_create, staging_review_table_create,
+                         staging_business_table_create, dim_users_table_create, dim_location_table_create,
+                         dim_business_table_create, dim_datetime_table_create, fact_tip_table_create,fact_review_table_create ]
 
-copy_table_queries = [  staging_user_copy ]
+copy_table_queries = [ staging_tip_copy, staging_user_copy, staging_review_copy, staging_business_copy]
 
 insert_Dim_queries = [ dim_users_table_insert, dim_location_table_insert ,dim_business_table_insert, dim_datetime_table_insert  ]
 
